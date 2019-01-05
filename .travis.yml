@@ -1,0 +1,19 @@
+language: ruby
+rvm:
+  - 2.6.0
+env:
+  - RAILS_ENV=test
+services:
+  - postgresql
+before_install:
+  - cp config/database.yml.example config/database.yml
+install:
+  - gem install bundler
+  - bundle install
+  - yarn
+  - bundle exec rake db:create
+  - bundle exec rake db:migrate
+script:
+  - bundle exec rubocop .
+  - bundle exec rspec
+
