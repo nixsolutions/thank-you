@@ -38,6 +38,11 @@ rescue ActiveRecord::PendingMigrationError => e
   exit 1
 end
 
+Bullet.enable = true
+Bullet.raise = true
+Bullet.bullet_logger = true
+Bullet.rails_logger = true
+
 RSpec.configure do |config|
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
@@ -63,6 +68,22 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+  if Bullet.enable?
+    config.before do
+      Bullet.start_request
+    end
+
+    config.after do
+      Bullet.perform_out_of_channel_notifications if Bullet.notification?
+      Bullet.end_request
+    end
+
+    config.around(disable_bullet: true) do |example|
+      Bullet.enable = false
+      example.run
+      Bullet.enable = true
+    end
+  end
 end
 
 Shoulda::Matchers.configure do |config|
