@@ -1,0 +1,36 @@
+require: rubocop-rspec
+
+AllCops:
+  TargetRubyVersion: 2.6.0
+
+  Exclude:
+    - bin/**/*
+    - config/initializers/devise.rb
+    - db/schema.rb
+    - db/migrate/**/*
+    - node_modules/**/*
+    - tmp/**/*
+    - vendor/**/*
+    - vendor/**/.irbrc
+
+Rails:
+  Enabled: true
+
+Layout/SpaceInsideArrayLiteralBrackets:
+  Exclude:
+    - 'config/environments/production.rb'
+
+Style/Documentation:
+  Exclude:
+    - 'spec/**/*'
+    - 'app/**/*'
+    - 'config/application.rb'
+
+Style/StringLiterals:
+  Exclude:
+    - 'config/application.rb'
+    - 'config/environments/production.rb'
+    - 'config/puma.rb'
+
+Metrics/LineLength:
+  Max: 120
