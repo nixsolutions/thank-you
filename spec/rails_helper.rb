@@ -84,6 +84,8 @@ RSpec.configure do |config|
       Bullet.enable = true
     end
   end
+
+  config.include FactoryBot::Syntax::Methods
 end
 
 Shoulda::Matchers.configure do |config|
