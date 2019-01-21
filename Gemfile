@@ -40,6 +40,7 @@ group :development, :test do
   gem 'bullet'
   gem 'factory_bot_rails'
   gem 'faker'
+  gem 'i18n-tasks'
   gem 'pry-rails'
   gem 'rspec-rails', '~> 3.8'
   gem 'rubocop', '~> 0.62.0', require: false
