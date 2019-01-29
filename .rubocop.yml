@@ -38,3 +38,4 @@ Metrics/LineLength:
 Metrics/BlockLength:
   Exclude:
     - 'config/environments/development.rb'
+    - 'spec/**/*.rb'
