@@ -44,6 +44,7 @@ group :development, :test do
   gem 'i18n-tasks'
   gem 'pry-rails'
   gem 'rspec-rails', '~> 3.8'
+  gem 'byebug'
   gem 'rubocop', '~> 0.63.1', require: false
   gem 'rubocop-rspec'
   gem 'webmock'
@@ -59,10 +60,10 @@ group :development do
 end
 
 group :test do
+  gem 'capybara'
   gem 'database_cleaner'
   gem 'rails-controller-testing'
   gem 'shoulda-matchers', '4.0.0.rc1'
-  gem 'capybara'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

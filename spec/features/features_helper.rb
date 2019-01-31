@@ -3,5 +3,5 @@
 require 'rails_helper'
 
 RSpec.configure do |config|
-  config.include Features, type: :feature
+  config.include Features
 end
