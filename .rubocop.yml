@@ -39,3 +39,6 @@ Metrics/BlockLength:
   Exclude:
     - 'config/environments/development.rb'
     - 'spec/**/*.rb'
+DescribeClass:
+  Exclude:
+    - 'spec/**/*.rb'
