@@ -38,3 +38,6 @@ Metrics/LineLength:
 Metrics/BlockLength:
   Exclude:
     - 'config/environments/development.rb'
+
+Style/RegexpLiteral:
+  EnforcedStyle: 'slashes'
