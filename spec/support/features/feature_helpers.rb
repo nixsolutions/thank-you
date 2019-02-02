@@ -20,4 +20,3 @@ module Features
     "#{ENV['LOCALHOST']}/users/sign_up"
   end
 end
-3
