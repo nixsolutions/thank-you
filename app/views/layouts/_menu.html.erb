@@ -1,0 +1,12 @@
+<div class="ui secondary menu">
+  <h4 class="ui header item">
+    <%= link_to 'Thank You', root_path, class: 'main-link' %>
+  </h4>
+  <div class="right menu">
+    <% if current_user.present? %>
+      <%= button_to 'Sign out', destroy_user_session_path, method: :delete, class: 'ui inverted blue button' %>
+    <% else %>
+      <%= button_to 'Sign in', new_user_session_path, method: :get, class: 'ui inverted blue button' %>
+    <% end %>
+  </div>
+</div>

@@ -6,9 +6,11 @@ FactoryBot.define do
   end
 
   factory :invitation do
+    token
   end
 
   factory :expired_invitation, class: 'Invitation' do
+    token
     created_at { Time.current - 20.minutes }
   end
 end

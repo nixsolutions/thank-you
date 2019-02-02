@@ -1,14 +1,13 @@
 # frozen_string_literal: true
 
 class InvitationLinksGenerator
-  def initialize(endpoint, count)
-    @endpoint = endpoint
+  def initialize(count)
     @count = count
     @links = []
   end
 
-  def self.call(endpoint, count)
-    new(endpoint, count).call
+  def self.call(count)
+    new(count).call
   end
 
   def call
@@ -25,6 +24,6 @@ class InvitationLinksGenerator
   attr_reader :count, :endpoint
 
   def link_url(token)
-    "#{endpoint}?token=#{token}"
+    "#{ENV['LOCALHOST']}/users/sign_up?token=#{token}"
   end
 end

@@ -34,23 +34,21 @@ RSpec.describe Invitation, type: :model do
   end
 
   describe '.verify_token?' do
-    context 'when token exists' do
-      context 'when token has not been expired' do
-        it 'returns true' do
-          invitation = create(:invitation)
-          expect(described_class.verify_token?(invitation.token)).to eq true
-        end
+    context 'when token exists and token has not been expired' do
+      it 'returns true' do
+        invitation = create(:invitation)
+        expect(described_class.verify_token?(invitation.token)).to eq true
       end
+    end
 
-      context 'when token has been expired' do
-        let!(:invitation) { create(:expired_invitation) }
+    context 'when token exists and token has been expired' do
+      let!(:invitation) { create(:expired_invitation) }
 
-        it 'destroys invitation with expired token' do
-          expect { described_class.verify_token?(invitation.token) }.to change(described_class, :count).by(-1)
-        end
-        it 'returns false' do
-          expect(described_class.verify_token?(invitation.token)).to eq false
-        end
+      it 'destroys invitation with expired token' do
+        expect { described_class.verify_token?(invitation.token) }.to change(described_class, :count).by(-1)
+      end
+      it 'returns false' do
+        expect(described_class.verify_token?(invitation.token)).to eq false
       end
     end
 
