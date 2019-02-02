@@ -10,6 +10,7 @@
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "resolve-url-loader": "^3.0.0",
+    "semantic-ui-css": "^2.4.1",
     "webpack-cli": "^3.2.0"
   },
   "devDependencies": {

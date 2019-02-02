@@ -8,19 +8,19 @@ describe 'User Signs Up' do
   context 'with unique link' do
     it 'successfully signs up and redirects to a Main Page' do
       invitation = create(:invitation)
-      link = "#{new_user_registration_url}?token=#{invitation.token}"
+      link = "#{sign_up_url}?token=#{invitation.token}"
       sign_up(user, link)
       expect(page).to have_current_path root_path
     end
   end
 
   context 'without unique link' do
+    before { visit new_user_registration_url }
+
     it 'shows warning message' do
-      visit new_user_registration_url
-      expect(page).to have_content 'You need a unique link to Sign Up'
+      expect(page).to have_content 'You need a unique link to sign up'
     end
     it 'redirects to a Login Page' do
-      visit new_user_registration_url
       expect(page).to have_current_path new_user_session_path
     end
   end

@@ -39,12 +39,13 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
   gem 'bullet'
+  gem 'byebug'
+  gem 'dotenv-rails'
   gem 'factory_bot_rails'
   gem 'faker'
   gem 'i18n-tasks'
   gem 'pry-rails'
   gem 'rspec-rails', '~> 3.8'
-  gem 'byebug'
   gem 'rubocop', '~> 0.63.1', require: false
   gem 'rubocop-rspec'
   gem 'webmock'

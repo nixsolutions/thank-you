@@ -15,4 +15,9 @@ module Features
     fill_in 'Password confirmation', with: user.password
     click_on 'Sign up'
   end
+
+  def sign_up_url
+    "#{ENV['LOCALHOST']}/users/sign_up"
+  end
 end
+3

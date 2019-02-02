@@ -1,0 +1,17 @@
+<% if errors.any? %>
+  <div class="errors">
+    <div class="ui error tiny message">
+      <div class="header">
+        There are some errors:
+      </div>
+      <i class="close icon"></i>
+      <ul class="list">
+        <% errors.messages.each do |error| %>
+          <% if error[1][0] %>
+            <li><%= "#{error[0].to_s.titleize} #{error[1][0]}" %></li>
+          <% end %>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+<% end %>
