@@ -11,20 +11,19 @@ class Invitation < ApplicationRecord
     created_at + EXPIRE_TIME_LIMIT
   end
 
-  def expired?
-    expires_at <= Time.current
-  end
-
   class << self
     def verify_token?(token)
       invitation = Invitation.find_by(token: token)
-      if invitation&.expired?
-        invitation.destroy
-        false
-      else
-        !invitation.nil? # if invitation is nil -> false, else -> true
-      end
+      invitation.present? && invitation.verify_expiring?
     end
+  end
+
+  def verify_expiring?
+    expired? ? destroy && false : true
+  end
+
+  def expired?
+    expires_at <= Time.current
   end
 
   private
