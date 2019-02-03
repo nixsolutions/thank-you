@@ -21,10 +21,8 @@ class Invitation < ApplicationRecord
       if invitation&.expired?
         invitation.destroy
         false
-      elsif !invitation
-        false
       else
-        true
+        !invitation.nil? # if invitation is nil -> false, else -> true
       end
     end
   end

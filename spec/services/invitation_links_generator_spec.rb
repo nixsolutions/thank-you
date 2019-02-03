@@ -9,7 +9,7 @@ describe InvitationLinksGenerator do
     it 'returns an array of links' do
       links = described_class.call(3)
       Invitation.all.each do |invitation|
-        expect(links).to include "#{sign_up_url}?token=#{invitation.token}"
+        expect(links).to include new_user_registration_url(token: invitation.token)
       end
     end
   end
