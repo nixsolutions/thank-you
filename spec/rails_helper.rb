@@ -86,6 +86,7 @@ RSpec.configure do |config|
   end
 
   config.include FactoryBot::Syntax::Methods
+  config.include Routeable
 end
 
 Shoulda::Matchers.configure do |config|

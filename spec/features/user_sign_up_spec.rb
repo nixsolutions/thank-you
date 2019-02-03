@@ -8,7 +8,7 @@ describe 'User Signs Up' do
   context 'with unique link' do
     it 'successfully signs up and redirects to a Main Page' do
       invitation = create(:invitation)
-      link = "#{sign_up_url}?token=#{invitation.token}"
+      link = new_user_registration_url(token: invitation.token)
       sign_up(user, link)
       expect(page).to have_current_path root_path
     end
