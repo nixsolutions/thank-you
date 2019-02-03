@@ -5,6 +5,7 @@ class InvitationLinksGenerator
 
   def initialize(count)
     @count = count
+    @links = []
   end
 
   def self.call(count)
@@ -12,11 +13,10 @@ class InvitationLinksGenerator
   end
 
   def call
-    links = []
     @count.times do
       invitation = Invitation.create
-      links << new_user_registration_url(token: invitation.token)
+      @links << new_user_registration_url(token: invitation.token)
     end
-    links
+    @links
   end
 end

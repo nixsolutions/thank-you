@@ -15,31 +15,15 @@ RSpec.describe Invitation, type: :model do
     end
   end
 
-  describe '#expired?' do
-    context 'when expired' do
-      it 'returns true' do
-        invitation = create(:expired_invitation)
-        expect(invitation.expired?).to eq true
-      end
-    end
-
-    context 'when not expired' do
-      it 'returns false' do
-        invitation = create(:invitation)
-        expect(invitation.expired?).to eq false
-      end
-    end
-  end
-
   describe '.verify_token?' do
-    context 'when token exists and token has not been expired' do
+    context 'when token exists and has not been expired' do
       it 'returns true' do
         invitation = create(:invitation)
         expect(described_class.verify_token?(invitation.token)).to eq true
       end
     end
 
-    context 'when token exists and token has been expired' do
+    context 'when token exists and has been expired' do
       let!(:invitation) { create(:expired_invitation) }
 
       it 'destroys invitation with expired token' do
@@ -53,6 +37,48 @@ RSpec.describe Invitation, type: :model do
     context 'when token does not exist' do
       it 'returns false' do
         expect(described_class.verify_token?('invalid_token')).to eq false
+      end
+    end
+  end
+
+  describe '#verify_expiring?' do
+    context 'when invitation exists and has not been expired' do
+      it 'returns true' do
+        invitation = create(:invitation)
+        expect(invitation.verify_expiring?).to eq true
+      end
+    end
+
+    context 'when invitation exists and has been expired' do
+      let!(:invitation) { create(:expired_invitation) }
+
+      it 'destroys invitation with expired token' do
+        expect { invitation.verify_expiring? }.to change(described_class, :count).by(-1)
+      end
+      it 'returns false' do
+        expect(invitation.verify_expiring?).to eq false
+      end
+    end
+
+    context 'when token does not exist' do
+      it 'returns false' do
+        expect(described_class.verify_token?('invalid_token')).to eq false
+      end
+    end
+  end
+
+  describe '#expired?' do
+    context 'when expired' do
+      it 'returns true' do
+        invitation = create(:expired_invitation)
+        expect(invitation.expired?).to eq true
+      end
+    end
+
+    context 'when not expired' do
+      it 'returns false' do
+        invitation = create(:invitation)
+        expect(invitation.expired?).to eq false
       end
     end
   end
