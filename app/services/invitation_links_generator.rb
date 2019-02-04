@@ -13,10 +13,15 @@ class InvitationLinksGenerator
   end
 
   def call
-    @count.times do
+    count.times do
       invitation = Invitation.create
-      @links << new_user_registration_url(token: invitation.token)
+      links << new_user_registration_url(token: invitation.token)
     end
-    @links
+    links
   end
+
+  private
+
+  attr_accessor :links
+  attr_reader :count
 end

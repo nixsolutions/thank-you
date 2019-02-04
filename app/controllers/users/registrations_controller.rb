@@ -5,15 +5,7 @@ module Users
     before_action :configure_permitted_parameters
     before_action :check_token_presence, only: %i[new create]
 
-    after_action :destroy_invitation, only: :create
-
-    def new
-      super
-    end
-
-    def create
-      super
-    end
+    after_action :destroy_invitation, only: %i[create]
 
     private
 
