@@ -1,2 +1,9 @@
 ---
 en:
+  activerecord:
+    errors:
+      models:
+        contact:
+          attributes:
+            data:
+              informat: has incorrect format
