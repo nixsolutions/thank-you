@@ -4,7 +4,7 @@ FactoryBot.define do
   factory :contact_type do
     factory :phone do
       title { 'phone' }
-      subtype { 'home' }
+      subtype { 'cell' }
     end
   end
 end

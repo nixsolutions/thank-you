@@ -4,11 +4,11 @@ describe ContactType, type: :model do
   it { is_expected.to have_many(:contacts).dependent(:destroy) }
   it { is_expected.to validate_presence_of :title }
   it { is_expected.to validate_presence_of :subtype }
-  it { is_expected.to validate_inclusion_of(:title).in_array(CONTACT_TYPES) }
+  it { is_expected.to validate_inclusion_of(:title).in_array(described_class::CONTACT_TYPES) }
   it { is_expected.to validate_uniqueness_of(:title).scoped_to(:subtype) }
 
   context 'when title present' do
-    let(:contact_type) { create(:phone) }
+    let(:contact_type) { build(:phone) }
 
     it 'validate if valid' do
       expect(contact_type).to be_valid
