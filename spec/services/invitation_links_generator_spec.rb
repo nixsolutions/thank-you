@@ -6,6 +6,7 @@ describe InvitationLinksGenerator do
       links = described_class.call(3)
       expect(links.length).to eq 3
     end
+
     it 'returns an array of links' do
       links = described_class.call(3)
       Invitation.all.each do |invitation|

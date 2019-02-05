@@ -40,3 +40,4 @@ yarn-debug.log*
 # Environment variables
 .env.development
 .env.test
+.env

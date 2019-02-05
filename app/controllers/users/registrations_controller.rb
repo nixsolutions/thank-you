@@ -14,11 +14,11 @@ module Users
     end
 
     def check_token_presence
-      redirect_to new_user_session_path, alert: 'You need a unique link to sign up.' unless valid_token?
+      redirect_to new_user_session_path, alert: t('controllers.messages.link_not_unique') unless valid_token?
     end
 
     def valid_token?
-      Invitation.verify_token?(params[:token])
+      Invitation.find_by(token: params[:token])
     end
 
     def destroy_invitation
