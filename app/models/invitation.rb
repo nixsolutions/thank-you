@@ -7,25 +7,6 @@ class Invitation < ApplicationRecord
 
   before_create :set_token
 
-  def expires_at
-    created_at + EXPIRE_TIME_LIMIT
-  end
-
-  class << self
-    def verify_token?(token)
-      invitation = Invitation.find_by(token: token)
-      invitation.present? && invitation.verify_expiring?
-    end
-  end
-
-  def verify_expiring?
-    expired? ? destroy && false : true
-  end
-
-  def expired?
-    expires_at <= Time.current
-  end
-
   private
 
   def set_token

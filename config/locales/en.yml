@@ -1,5 +1,8 @@
 ---
 en:
+  controllers:
+    messages:
+      link_not_unique: You need a unique link to sign up.
   activerecord:
     errors:
       models:

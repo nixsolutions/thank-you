@@ -4,11 +4,11 @@
       <div class="header">
         There are some errors:
       </div>
-      <i class="close icon"></i>
+      <i class="close icon" id="close"></i>
       <ul class="list">
         <% errors.messages.each do |error| %>
-          <% if error[1][0] %>
-            <li><%= "#{error[0].to_s.titleize} #{error[1][0]}" %></li>
+          <% if error_value(error) %>
+            <li><%= "#{error_title(error)} #{error_value(error)}" %></li>
           <% end %>
         <% end %>
       </ul>
