@@ -1,0 +1,5 @@
+---
+en:
+  shared:
+    errors:
+      header: 'There are some errors:'

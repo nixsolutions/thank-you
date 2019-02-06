@@ -1,0 +1,8 @@
+---
+en:
+  mailers:
+    devise:
+      headers:
+        hello: Привет
+      links:
+        confirm_account: Подтвердить мой аккаунт
