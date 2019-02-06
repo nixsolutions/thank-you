@@ -18,7 +18,7 @@ Rails:
 
 Rails/LexicallyScopedActionFilter:
   Exclude:
-    - 'app/controllers/**/*.rb'
+    - 'app/controllers/users/registrations_controller.rb'
 
 Layout/SpaceInsideArrayLiteralBrackets:
   Exclude:

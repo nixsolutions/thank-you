@@ -1,0 +1,8 @@
+---
+en:
+  mailers:
+    devise:
+      headers:
+        hello: Hello
+      links:
+        confirm_account: Confirm my account
