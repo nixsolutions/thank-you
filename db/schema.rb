@@ -10,17 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_04_162936) do
+ActiveRecord::Schema.define(version: 2019_02_07_100945) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "contact_types", force: :cascade do |t|
-    t.string "title"
+    t.string "main_type"
     t.string "subtype"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["title", "subtype"], name: "index_contact_types_on_title_and_subtype", unique: true
+    t.index ["main_type", "subtype"], name: "index_contact_types_on_main_type_and_subtype", unique: true
   end
 
   create_table "contacts", force: :cascade do |t|
