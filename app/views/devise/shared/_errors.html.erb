@@ -1,10 +1,6 @@
-<% if errors.any? %>
-  <div class="errors">
-    <div class="ui error tiny message">
-      <div class="header">
-        <%= t('shared.errors.header') %>
-      </div>
-      <i class="close icon" id="close"></i>
+<div class="errors">
+  <% if errors.any? %>
+    <div class="ui red tiny message servers-errors">
       <ul class="list">
         <% errors.messages.each do |error| %>
           <% if error_value(error) %>
@@ -13,5 +9,7 @@
         <% end %>
       </ul>
     </div>
+  <% end %>
+  <div class="ui error red tiny message">
   </div>
-<% end %>
+</div>
