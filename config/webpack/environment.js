@@ -1,4 +1,5 @@
-const { environment } = require('@rails/webpacker')
+const { environment } = require('@rails/webpacker');
+const webpack = require('webpack');
 
 module: {
   rules: [
@@ -21,5 +22,12 @@ environment.loaders.get('sass').use.splice(-1, 0, {
     attempts: 1
   }
 });
+
+environment.plugins.prepend('Provide', new webpack.ProvidePlugin({
+    $: "jquery",
+    jQuery: "jquery",
+    "window.jQuery": "jquery"
+  })
+);
 
 module.exports = environment
