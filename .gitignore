@@ -38,6 +38,4 @@ yarn-debug.log*
 .idea/
 
 # Environment variables
-.env.development
-.env.test
-.env
+.env.*
