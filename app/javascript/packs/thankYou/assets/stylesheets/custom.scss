@@ -14,7 +14,10 @@ header .menu {
   margin-top: 5px;
 }
 
-#submit {
-  margin-top: 5px;
+form.sign-up .submit {
   margin-bottom: 5px;
+}
+
+form.sign-in .submit {
+  margin-top: 5px;
 }

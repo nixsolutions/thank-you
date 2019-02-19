@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 class Invitation < ApplicationRecord
-  EXPIRE_TIME_LIMIT = 15.minutes
-
   validates :token, uniqueness: true
 
   before_create :set_token

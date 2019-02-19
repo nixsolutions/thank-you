@@ -15,13 +15,6 @@ ActiveRecord::Schema.define(version: 2019_02_04_162936) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "invitations", force: :cascade do |t|
-    t.string "token"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["token"], name: "index_invitations_on_token", unique: true
-  end
-
   create_table "contact_types", force: :cascade do |t|
     t.string "title"
     t.string "subtype"
@@ -38,6 +31,13 @@ ActiveRecord::Schema.define(version: 2019_02_04_162936) do
     t.datetime "updated_at", null: false
     t.index ["contact_type_id"], name: "index_contacts_on_contact_type_id"
     t.index ["organization_id"], name: "index_contacts_on_organization_id"
+  end
+
+  create_table "invitations", force: :cascade do |t|
+    t.string "token"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["token"], name: "index_invitations_on_token", unique: true
   end
 
   create_table "organizations", force: :cascade do |t|

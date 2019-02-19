@@ -2,6 +2,7 @@
 
 module Users
   class RegistrationsController < Devise::RegistrationsController
+    skip_before_action :set_minimum_password_length, only: %i[new create]
     before_action :configure_permitted_parameters
     before_action :check_token_presence, only: %i[new create]
 

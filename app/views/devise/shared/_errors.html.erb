@@ -1,11 +1,9 @@
 <div class="errors">
   <% if errors.any? %>
-    <div class="ui red tiny message servers-errors">
+    <div class="ui red tiny message" id="servers-errors">
       <ul class="list">
-        <% errors.messages.each do |error| %>
-          <% if error_value(error) %>
-            <li><%= "#{error_title(error)} #{error_value(error)}" %></li>
-          <% end %>
+        <% errors.full_messages.each do |error| %>
+          <li><%= error %></li>
         <% end %>
       </ul>
     </div>

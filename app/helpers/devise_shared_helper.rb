@@ -20,12 +20,4 @@ module DeviseSharedHelper
   def omniauth_link(provider)
     link_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider)
   end
-
-  def error_value(error)
-    error[1][0]
-  end
-
-  def error_title(error)
-    error[0].to_s.titleize
-  end
 end
