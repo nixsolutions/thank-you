@@ -1,0 +1,22 @@
+<div class="ui placeholder segment">
+  <h2 class="ui header center aligned">Forgot your password?</h2>
+  <div class="ui one column very relaxed stackable grid">
+    <div class="column">
+      <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post },
+                   class: 'ui form') do |f| %>
+        <div class="field">
+          <%= f.label :email %>
+          <div class="ui left icon input">
+            <%= f.email_field :email, autofocus: true, autocomplete: 'email', placeholder: 'Your email' %>
+            <i class="user icon"></i>
+          </div>
+        </div>
+        <%= f.submit "Send me reset password instructions", class: 'ui blue submit mini button', id: 'submit' %>
+        <div class="field">
+          <%= render "devise/shared/links" %>
+          <%= render 'devise/shared/errors', errors: resource.errors %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

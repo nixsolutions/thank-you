@@ -16,6 +16,10 @@ AllCops:
 Rails:
   Enabled: true
 
+Rails/LexicallyScopedActionFilter:
+  Exclude:
+    - 'app/controllers/users/registrations_controller.rb'
+
 Layout/SpaceInsideArrayLiteralBrackets:
   Exclude:
     - 'config/environments/production.rb'
@@ -38,3 +42,8 @@ Metrics/LineLength:
 Metrics/BlockLength:
   Exclude:
     - 'config/environments/development.rb'
+    - 'spec/**/*.rb'
+
+DescribeClass:
+  Exclude:
+    - 'spec/**/*.rb'

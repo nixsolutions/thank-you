@@ -19,6 +19,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'webpacker'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
+gem 'devise'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
@@ -38,12 +39,14 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
   gem 'bullet'
+  gem 'byebug'
+  gem 'dotenv-rails'
   gem 'factory_bot_rails'
   gem 'faker'
   gem 'i18n-tasks'
   gem 'pry-rails'
   gem 'rspec-rails', '~> 3.8'
-  gem 'rubocop', '~> 0.62.0', require: false
+  gem 'rubocop', '~> 0.63.1', require: false
   gem 'rubocop-rspec'
   gem 'webmock'
 end
@@ -58,6 +61,7 @@ group :development do
 end
 
 group :test do
+  gem 'capybara'
   gem 'database_cleaner'
   gem 'rails-controller-testing'
   gem 'shoulda-matchers', '4.0.0.rc1'

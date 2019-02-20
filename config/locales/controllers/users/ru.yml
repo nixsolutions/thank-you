@@ -1,0 +1,5 @@
+---
+ru:
+  controllers:
+    messages:
+      link_not_unique: Вам нужна уникальная ссылка что бы зарегистрироваться.

@@ -9,7 +9,17 @@
     <%= stylesheet_pack_tag 'thankYou/assets/stylesheets/app' %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="ui container relaxed">
+    <header>
+      <%= render 'layouts/menu' %>
+    </header>
+
+    <%= render 'layouts/notices_alerts' %>
+
+    <div id="root"></div>
+
+    <div class="ui container">
+      <%= yield %>
+    </div>
   </body>
 </html>
