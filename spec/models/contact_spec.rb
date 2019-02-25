@@ -7,16 +7,16 @@ describe Contact, type: :model do
   it { is_expected.to validate_presence_of :contact_type }
   it { is_expected.to validate_presence_of :data }
 
-  context 'when contact_type present' do
-    let(:contact) { create(:contact) }
+  describe 'validates that :data' do
+    let(:valid_contact) { build(:contact) }
+    let(:invalid_contact) { build(:contact, data: 'invalid') }
 
-    it 'validate if valid' do
-      expect(contact).to be_valid
+    it 'is valid with expected format' do
+      expect(valid_contact).to be_valid
     end
 
-    it 'validate if invalid' do
-      contact.data = ''
-      expect(contact).not_to be_valid
+    it 'is invalid with unexpected format' do
+      expect(invalid_contact).not_to be_valid
     end
   end
 end
