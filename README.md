@@ -1,24 +1,43 @@
-# README
+# ThankYou
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A recommendations database.
 
-Things you may want to cover:
+## Getting started
 
-* Ruby version
+## Developing
 
-* System dependencies
+Install ruby dependencies:
 
-* Configuration
+```shell
+bundle install
+```
 
-* Database creation
+Copy database.yml.example into database.yml:
 
-* Database initialization
+```shell
+cp database.yml.example database.yml
+```
 
-* How to run the test suite
+Make your db configurations and install yarn dependencies:
 
-* Services (job queues, cache servers, search engines, etc.)
+```shell
+yarn install
+```
 
-* Deployment instructions
+Create and migrate database:
 
-* ...
+```shell
+rake db:create && rake db:migrate
+```
+
+Go to rails console and create an Invitation:
+
+```shell
+Invitation.create
+```
+
+Copy token and go to "localhost:3000/users/sign_up/your_invitation_token"
+
+Register a user.
+
+You can sign in if you go to "localhost:3000/users/sign_in"
