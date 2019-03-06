@@ -6,4 +6,6 @@ Rails.application.routes.draw do
     get 'users/sign_up/*token', to: 'users/registrations#new'
   end
   root to: 'pages#index'
+
+  resources :organizations
 end
