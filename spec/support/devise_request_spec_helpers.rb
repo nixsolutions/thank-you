@@ -1,5 +1,6 @@
-module DeviseRequestSpecHelpers
+# frozen_string_literal: true
 
+module DeviseRequestSpecHelpers
   include Warden::Test::Helpers
 
   def log_in(resource_or_scope, resource = nil)
