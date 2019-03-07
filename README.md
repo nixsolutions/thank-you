@@ -6,6 +6,10 @@ A recommendations database.
 
 [![Build Status](https://travis-ci.org/nixsolutions/thank-you.svg?branch=master)](https://travis-ci.org/nixsolutions/thank-you)
 
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/nixsolutions/thank-you/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/nixsolutions/thank-you/?branch=master)
+
+[![Code Coverage](https://scrutinizer-ci.com/g/nixsolutions/thank-you/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/nixsolutions/thank-you/?branch=master)
+
 ## Getting started
 
 ## Developing
