@@ -1,19 +1,10 @@
-<h1>Organization:</h1>
+<h1><%= I18n.t('organizations.form.title') %>:</h1>
 <%= form_for organization do |f| %>
-  <% if organization.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(organization.errors.count, "error") %> prohibited this organization from being saved:</h2>
-      <ul>
-        <% organization.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <%= render 'errors', resource: organization %>
 
   <div class="container">
     <%= f.label :name %><br/>
-    <%= f.text_field :name %><br/>
+    <%= f.text_field :name %>
   </div>
 
   <div class="container">

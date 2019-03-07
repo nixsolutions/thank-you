@@ -35,7 +35,6 @@ class OrganizationsController < ApplicationController
 
   def destroy
     @organization.destroy
-
     redirect_to organizations_path
   end
 
