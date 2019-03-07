@@ -2,6 +2,10 @@
 
 A recommendations database.
 
+## Achievements
+
+[![Build Status](https://travis-ci.org/nixsolutions/thank-you.svg?branch=master)](https://travis-ci.org/nixsolutions/thank-you)
+
 ## Getting started
 
 ## Developing
@@ -41,3 +45,9 @@ Copy token and go to "localhost:3000/users/sign_up/your_invitation_token"
 Register a user.
 
 You can sign in if you go to "localhost:3000/users/sign_in"
+
+## Demo
+
+## License
+The project is developed by [NIX Solutions](http://nixsolutions.com) Ruby team and distributed under [MIT LICENSE](https://raw.github.com/nixsolutions/thank-you/master/LICENSE)
+
