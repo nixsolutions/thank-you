@@ -2,19 +2,22 @@
   "name": "thankyou",
   "private": true,
   "dependencies": {
-    "@rails/webpacker": "3.5",
-    "babel-preset-react": "^6.24.1",
+    "@babel/core": "^7.0.0-0",
+    "@babel/preset-react": "^7.0.0",
+    "@rails/webpacker": "^4.0.2",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "caniuse-lite": "^1.0.30000942",
     "jquery": "^3.3.1",
-    "prop-types": "^15.6.2",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
-    "react-router": "^4.3.1",
+    "postcss-cssnext": "^3.1.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
     "react-router-dom": "^4.3.1",
-    "resolve-url-loader": "^3.0.0",
+    "resolve-url-loader": "^3.0.1",
     "semantic-ui-css": "^2.4.1",
-    "webpack-cli": "^3.2.0"
+    "typescript": "^3.3.3333"
   },
   "devDependencies": {
-    "webpack-dev-server": "^2.11.1"
+    "webpack-dev-server": "^3.2.1"
   }
 }

@@ -17,10 +17,7 @@ module: {
 }
 
 environment.loaders.get('sass').use.splice(-1, 0, {
-  loader: 'resolve-url-loader',
-  options: {
-    attempts: 1
-  }
+  loader: 'resolve-url-loader'
 });
 
 environment.plugins.prepend('Provide', new webpack.ProvidePlugin({
