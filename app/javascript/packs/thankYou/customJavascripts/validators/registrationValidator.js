@@ -40,6 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   document.getElementById('sign-up').addEventListener('click', () => {
     const serverErrors = document.getElementById('servers-errors');
-    if (serverErrors) serverErrors.classList.add('hidden');
+    if (serverErrors) {
+      serverErrors.classList.add('hidden');
+    }
   });
 });
