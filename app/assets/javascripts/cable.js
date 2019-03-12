@@ -4,6 +4,8 @@
 //= require action_cable
 //= require_self
 //= require_tree ./channels
+/** global: ActionCable */
+/** global: App */
 
 (function() {
   this.App || (this.App = {});
