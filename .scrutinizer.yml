@@ -1,0 +1,34 @@
+checks:
+  ruby: true
+  javascript: true
+build:
+  services:
+    postgres: 10
+  nodes:
+    analysis:
+      tests:
+        override:
+          - ruby-scrutinizer-run
+          -
+            command: rubocop-run
+            use_website_config: false
+          - js-scrutinizer-run
+      environment:
+        ruby:
+          version: 2.6.0
+        node: v10.14.2
+    tests:
+      project_setup:
+        before:
+          - 'cp config/database.yml.example config/database.yml'
+          - 'bundle exec rails db:create db:migrate'
+      environment:
+        variables:
+          THANKYOU_DATABASE_USERNAME: 'scrutinizer'
+          THANKYOU_DATABASE_PASSWORD: 'scrutinizer'
+        ruby:
+          version: 2.6.0
+        node: v10.14.2
+filter:
+  excluded_paths:
+    - 'vendor/*'
