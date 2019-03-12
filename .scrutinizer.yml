@@ -32,3 +32,4 @@ build:
 filter:
   excluded_paths:
     - 'vendor/*'
+    - 'config/webpack/environment.js'
