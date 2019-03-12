@@ -7,3 +7,6 @@ en:
           attributes:
             data:
               informat: has incorrect format
+  organizations:
+    form:
+      title: Organization

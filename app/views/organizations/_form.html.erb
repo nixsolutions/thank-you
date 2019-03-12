@@ -1,0 +1,18 @@
+<h1><%= I18n.t('organizations.form.title') %>:</h1>
+<%= form_for organization do |f| %>
+  <%= render 'errors', resource: organization %>
+
+  <div class="container">
+    <%= f.label :name %><br/>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="container">
+    <%= f.label :description %><br/>
+    <%= f.text_field :description %><br/>
+  </div>
+
+  <%= f.submit 'Create' %>
+<% end %>
+
+<%= link_to 'Back', organizations_path %>

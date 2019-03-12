@@ -1,0 +1,10 @@
+<% @organizations.each do |organization| %>
+  <ul>
+    <li>
+      <%= organization.user.email %><br/>
+      <%= link_to organization.name, organization %><br/>
+      <%= organization.description %>
+    </li>
+  </ul>
+<% end %>
+<%= link_to 'New Organization', new_organization_path %>
