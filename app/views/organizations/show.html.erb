@@ -11,6 +11,6 @@
   <%= contact.contact_type.main_type %> - <%= contact.contact_type.subtype %><br/>
   <%= contact.data %><br/>
   <%= link_to 'Update', edit_contact_path(@organization) %>
-  <%= button_to 'Destroy', contact_path(contact), method: :delete %>
+  <%= button_to 'Destroy', contact_path(contact), method: :delete, class: "delete_contact_#{contact.id}" %>
 <% end %>
 <%= link_to 'Create Contact', new_contact_path %>
