@@ -1,12 +1,63 @@
 ---
 en:
+  account_confirmation_header: 'You can confirm your account email through the link below:'
+  account_has_been_locked: Your account has been locked due to an excessive number of unsuccessful sign in attempts.
   activerecord:
+    attributes:
+      organization:
+        description: Description
+        name: Name
+      user:
+        email: Email
+        password: Password
+        password_confirmation: Password confirmation
     errors:
       models:
         contact:
           attributes:
             data:
               informat: has incorrect format
+  are_you_sure: Are you sure?
+  back: Back
+  cancel_my_account: Cancel my account
+  change_my_password: Change my password
+  change_your_password: Change your password
+  characters_minimum: characters minimum
+  click_the_link_to_unlock: 'Click the link below to unlock your account:'
+  confirm_new_password: Confirm new password
+  create: Create
+  currently_waiting_confirmation_for: 'Currently waiting confirmation for: %{email}'
+  destroy: Destroy
+  edit: Edit
+  email: Email
+  email_changed_notice: We're contacting you to notify you that your email is being changed to
+  enter: Sign in
+  forgotten_password: Forgot your password?
+  ignore_email: If you didn't request this, please ignore this email.
+  leave_blank: "(leave blank if you don't want to change it)"
+  lost_confirmation_instructions: Didn't receive confirmation instructions?
+  lost_unlock_instructions: Didn't receive unlock instructions?
+  need_current_password: "(we need your current password to confirm your changes)"
+  new_organization: New organization
+  new_password: New password
   organizations:
     form:
       title: Organization
+    prohibited: 'prohibited this organization from being saved:'
+  password: Password
+  password_changed_notice: We're contacting you to notify you that your password has been changed.
+  password_confirmation: Password confirmation
+  password_will_be_changed_after_creating_new_one: Your password won't change until you access the link above and create a new one.
+  recend_confirmation_instructions: Resend confirmation instructions
+  remember_me: Remember me
+  resend_unlock_instructions: Resend unlock instructions
+  send_me_reset_password_instructions: Send me reset password instructions
+  sign_in: Sign in
+  sign_out: Sign out
+  sign_up: Sign up
+  someone_requested_password_change: Someone has requested a link to change your password. You can do this through the link below.
+  unhappy: Unhappy?
+  unlock_my_account: Unlock my account
+  update: Update
+  welcome: Welcome
+  your_email: Your email

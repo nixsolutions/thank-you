@@ -1,0 +1,5 @@
+---
+uk:
+  controllers:
+    messages:
+      link_not_unique: Вам потрібне унікальне посилання для реєстрації.

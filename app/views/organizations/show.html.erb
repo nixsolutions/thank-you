@@ -1,6 +1,6 @@
 <%= @organization.user.email %><br/>
 <%= @organization.name %><br/>
 <%= @organization.description %><br/>
-<%= link_to 'Back', organizations_path %>
-<%= link_to 'Update', edit_organization_path(@organization) %>
-<%= button_to 'Destroy', organization_path(@organization), method: :delete %>
+<%= link_to t('back'), organizations_path %>
+<%= link_to t('update'), edit_organization_path(@organization) %>
+<%= button_to t('destroy'), organization_path(@organization), method: :delete %>
