@@ -21,7 +21,9 @@ class OrganizationsController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    @contacts = @organization.contacts.includes(:contact_type)
+  end
 
   def edit; end
 

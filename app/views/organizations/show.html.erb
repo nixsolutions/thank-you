@@ -4,3 +4,13 @@
 <%= link_to t('back'), organizations_path %>
 <%= link_to t('update'), edit_organization_path(@organization) %>
 <%= button_to t('destroy'), organization_path(@organization), method: :delete %>
+
+
+<p>Contacts</p>
+<% @contacts.each do |contact| %>
+  <%= contact.contact_type.main_type %> - <%= contact.contact_type.subtype %><br/>
+  <%= contact.data %><br/>
+  <%= link_to 'Update', edit_contact_path(@organization) %>
+  <%= button_to 'Destroy', contact_path(contact), method: :delete %>
+<% end %>
+<%= link_to 'Create Contact', new_contact_path %>

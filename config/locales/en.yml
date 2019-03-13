@@ -40,6 +40,9 @@ en:
   need_current_password: "(we need your current password to confirm your changes)"
   new_organization: New organization
   new_password: New password
+  contacts:
+    form:
+      title: Contact
   organizations:
     form:
       title: Organization

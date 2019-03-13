@@ -12,5 +12,6 @@ Rails.application.routes.draw do
       get 'users/sign_up/*token', to: 'users/registrations#new'
     end
     resources :organizations
+    resources :contacts, except: %i[index show]
   end
 end

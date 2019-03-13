@@ -1,6 +1,6 @@
 <h1><%= I18n.t('organizations.form.title') %>:</h1>
 <%= form_for organization do |f| %>
-  <%= render 'errors', resource: organization %>
+  <%= render 'common/errors', resource: organization %>
 
   <div class="container">
     <%= f.label :name %><br/>
