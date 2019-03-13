@@ -5,9 +5,9 @@
   <div class="right menu">
     <% if current_user.present? %>
       <h5 class="item"><%= current_user.email %></h5>
-      <%= button_to 'Sign out', destroy_user_session_path, method: :delete, class: 'ui inverted blue button' %>
+      <%= button_to t('sign_out'), destroy_user_session_path, method: :delete, class: 'ui inverted blue button' %>
     <% else %>
-      <%= button_to 'Sign in', new_user_session_path, method: :get, class: 'ui inverted blue button' %>
+      <%= button_to t('sign_in'), new_user_session_path, method: :get, class: 'ui inverted blue button' %>
     <% end %>
   </div>
 </div>
