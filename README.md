@@ -52,6 +52,8 @@ You can sign in if you go to "localhost:3000/users/sign_in"
 
 ## Demo
 
+https://thank-you-test.herokuapp.com
+
 ## License
 The project is developed by [NIX Solutions](http://nixsolutions.com) Ruby team and distributed under [MIT LICENSE](https://raw.github.com/nixsolutions/thank-you/master/LICENSE)
 
