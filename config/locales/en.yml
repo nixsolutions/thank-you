@@ -4,7 +4,14 @@ en:
   account_has_been_locked: Your account has been locked due to an excessive number of unsuccessful sign in attempts.
   activerecord:
     attributes:
+      contacts:
+        contact_type: Contact Type
+        data: data
+        organization: Organization
       organization:
+        description: Description
+        name: Name
+      organizations:
         description: Description
         name: Name
       user:
@@ -25,21 +32,6 @@ en:
   characters_minimum: characters minimum
   click_the_link_to_unlock: 'Click the link below to unlock your account:'
   confirm_new_password: Confirm new password
-  create: Create
-  currently_waiting_confirmation_for: 'Currently waiting confirmation for: %{email}'
-  destroy: Destroy
-  edit: Edit
-  email: Email
-  email_changed_notice: We're contacting you to notify you that your email is being changed to
-  enter: Sign in
-  forgotten_password: Forgot your password?
-  ignore_email: If you didn't request this, please ignore this email.
-  leave_blank: "(leave blank if you don't want to change it)"
-  lost_confirmation_instructions: Didn't receive confirmation instructions?
-  lost_unlock_instructions: Didn't receive unlock instructions?
-  need_current_password: "(we need your current password to confirm your changes)"
-  new_organization: New organization
-  new_password: New password
   contacts:
     form:
       title: Contact
@@ -52,6 +44,18 @@ en:
       destroy: Destroy
       new: New
       update: Update
+  currently_waiting_confirmation_for: 'Currently waiting confirmation for: %{email}'
+  edit: Edit
+  email: Email
+  email_changed_notice: We're contacting you to notify you that your email is being changed to
+  enter: Sign in
+  forgotten_password: Forgot your password?
+  ignore_email: If you didn't request this, please ignore this email.
+  leave_blank: "(leave blank if you don't want to change it)"
+  lost_confirmation_instructions: Didn't receive confirmation instructions?
+  lost_unlock_instructions: Didn't receive unlock instructions?
+  need_current_password: "(we need your current password to confirm your changes)"
+  new_password: New password
   organizations:
     form:
       title: Organization
