@@ -43,7 +43,11 @@ en:
   organizations:
     form:
       title: Organization
-    prohibited: 'prohibited this organization from being saved:'
+    prohibited:
+      few: "%{count} errors prohibited this organization from being saved:"
+      many: "%{count} errors prohibited this organization from being saved:"
+      one: "%{count} error prohibited this organization from being saved:"
+      other: "%{count} errors prohibited this organization from being saved:"
   password: Password
   password_changed_notice: We're contacting you to notify you that your password has been changed.
   password_confirmation: Password confirmation

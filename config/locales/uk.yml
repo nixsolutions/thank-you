@@ -25,7 +25,7 @@ uk:
   characters_minimum: "%{count} символів мінімум"
   click_the_link_to_unlock: 'Натисніть посилання для розблокування вашого облікового запису:'
   confirm_new_password: Підтвердьте новий пароль
-  create: Create
+  create: Створити
   currently_waiting_confirmation_for: 'Очікуємо на пітдвердження електронної пошти: %{email}'
   destroy: Destroy
   edit: Редагувати
@@ -38,12 +38,16 @@ uk:
   lost_confirmation_instructions: Не отримали інструкцій з підтвердження?
   lost_unlock_instructions: Не отримали інтструкцій з розблокування?
   need_current_password: "(нам потрібен ваш діючий пароль для підтвердження змін)"
-  new_organization: New organization
+  new_organization: Нова організація
   new_password: Новий пароль
   organizations:
     form:
-      title: Organization
-    prohibited: 'prohibited this organization from being saved:'
+      title: Організація
+    prohibited:
+      few: "%{count} помилки не дозволяють створити організацію:"
+      many: "%{count} помилок не дозволяють створити організацію:"
+      one: "%{count} помилка не дозволяє створити організацію:"
+      other: "%{count} помилок не дозволяють створити організацію:"
   password: Пароль
   password_changed_notice: Повідомляємо, що ваш пароль було змінено.
   password_confirmation: підтвердження паролю
