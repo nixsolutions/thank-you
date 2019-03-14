@@ -3,16 +3,16 @@
   <%= render 'common/errors', resource: organization %>
 
   <div class="container">
-    <%= f.label :name %><br/>
+    <%= f.label t('activerecord.attributes.organizations.name') %><br/>
     <%= f.text_field :name %>
   </div>
 
   <div class="container">
-    <%= f.label :description %><br/>
+    <%= f.label t('activerecord.attributes.organizations.description') %><br/>
     <%= f.text_field :description %><br/>
   </div>
 
-  <%= f.submit t('create') %>
+  <%= f.submit t('crud.actions.create') %>
 <% end %>
 
-<%= link_to t('back'), organizations_path %>
+<%= link_to I18n.t('crud.actions.back'), organizations_path %>

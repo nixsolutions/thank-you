@@ -43,6 +43,15 @@ en:
   contacts:
     form:
       title: Contact
+    show:
+      title: Contacts
+  crud:
+    actions:
+      back: Back
+      create: Create
+      destroy: Destroy
+      new: New
+      update: Update
   organizations:
     form:
       title: Organization
