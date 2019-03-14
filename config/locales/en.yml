@@ -4,14 +4,11 @@ en:
   account_has_been_locked: Your account has been locked due to an excessive number of unsuccessful sign in attempts.
   activerecord:
     attributes:
-      contacts:
+      contact:
         contact_type: Contact Type
         data: data
         organization: Organization
       organization:
-        description: Description
-        name: Name
-      organizations:
         description: Description
         name: Name
       user:
@@ -40,6 +37,8 @@ en:
   crud:
     actions:
       back: Back
+      contact:
+        new: New
       create: Create
       destroy: Destroy
       new: New

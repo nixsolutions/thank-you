@@ -4,14 +4,11 @@ uk:
   account_has_been_locked: Ваш обліковий запис було заблоковано через надто високу кількість неправильних спроб увійти.
   activerecord:
     attributes:
-      contacts:
+      contact:
         contact_type: Тип контакту
         data: дані
         organization: Організація
       organization:
-        description: Опис
-        name: Назва
-      organizations:
         description: Опис
         name: Назва
       user:
@@ -41,9 +38,11 @@ uk:
   crud:
     actions:
       back: Назад
+      contact:
+        new: Новий
       create: Створити
       destroy: Видалити
-      new: Новий
+      new: Нова
       update: Оновити
   currently_waiting_confirmation_for: 'Очікуємо на пітдвердження електронної пошти: %{email}'
   edit: Редагувати

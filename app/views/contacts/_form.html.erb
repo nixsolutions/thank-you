@@ -3,21 +3,21 @@
   <%= render 'common/errors', resource: contact %>
 
   <div class="container">
-    <%= f.label t('activerecord.attributes.contacts.data') %><br/>
+    <%= f.label :data %><br/>
     <%= f.text_field :data %>
   </div>
 
   <div class="container">
-    <%= f.label t('activerecord.attributes.contacts.organization') %><br/>
+    <%= f.label :organization %><br/>
     <%= f.collection_select :organization_id, Organization.all, :id, :name %>
   </div>
 
   <div class="container">
-    <%= f.label t('activerecord.attributes.contacts.contact_type') %><br/>
+    <%= f.label :contact_type %><br/>
     <%= f.collection_select :contact_type_id, ContactType.all, :id, :main_type %>
   </div>
 
-  <%= f.submit t('crud.actions.create') %>
+  <%= f.submit t('crud.actions.contact.new') %>
 <% end %>
 
 <%= link_to I18n.t('crud.actions.back'), organizations_path %>

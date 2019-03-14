@@ -37,7 +37,7 @@ describe 'User see contacts' do
         fill_in 'contact_data', with: attributes_for(:contact)[:data]
         page.select contact_type.main_type.to_s, from: 'contact_contact_type_id'
         page.select organization.name.to_s, from: 'contact_organization_id'
-        click_on 'Create'
+        click_on 'New'
 
         expect(page).to have_content attributes_for(:contact)[:data]
       end
@@ -45,9 +45,9 @@ describe 'User see contacts' do
 
     context 'when invalid data' do
       it 'does not create contact' do
-        click_on 'Create'
+        click_on 'New'
 
-        expect(page).to have_content "Data can't be blank"
+        expect(page).to have_content "data can't be blank"
       end
     end
   end
@@ -60,7 +60,7 @@ describe 'User see contacts' do
       visit edit_contact_path(contact)
 
       fill_in 'contact_data', with: '+380999999999'
-      click_on 'Create'
+      click_on 'New'
     end
 
     context 'when valid data' do
@@ -78,7 +78,7 @@ describe 'User see contacts' do
         visit edit_contact_path(contact)
 
         fill_in 'contact_data', with: ''
-        click_on 'Create'
+        click_on 'New'
       end
 
       it 'not redirects' do
@@ -86,7 +86,7 @@ describe 'User see contacts' do
       end
 
       it 'includes errors' do
-        expect(page).to have_content "Data can't be blank"
+        expect(page).to have_content "data can't be blank"
       end
     end
   end

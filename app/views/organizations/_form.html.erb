@@ -3,12 +3,12 @@
   <%= render 'common/errors', resource: organization %>
 
   <div class="container">
-    <%= f.label t('activerecord.attributes.organizations.name') %><br/>
+    <%= f.label :name %><br/>
     <%= f.text_field :name %>
   </div>
 
   <div class="container">
-    <%= f.label t('activerecord.attributes.organizations.description') %><br/>
+    <%= f.label :description %><br/>
     <%= f.text_field :description %><br/>
   </div>
 
