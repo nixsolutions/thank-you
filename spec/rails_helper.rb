@@ -87,6 +87,7 @@ RSpec.configure do |config|
   end
 
   config.include FactoryBot::Syntax::Methods
+  config.include I18nMacros
 end
 
 Shoulda::Matchers.configure do |config|

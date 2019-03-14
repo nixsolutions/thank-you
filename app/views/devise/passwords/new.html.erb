@@ -1,5 +1,5 @@
 <div class="ui placeholder segment">
-  <h2 class="ui header center aligned">Forgot your password?</h2>
+  <h2 class="ui header center aligned"><%= t('forgotten_password') %></h2>
   <div class="ui one column very relaxed stackable grid">
     <div class="column">
       <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post },
@@ -7,11 +7,11 @@
         <div class="field">
           <%= f.label :email %>
           <div class="ui left icon input">
-            <%= f.email_field :email, autofocus: true, autocomplete: 'email', placeholder: 'Your email' %>
+            <%= f.email_field :email, autofocus: true, autocomplete: 'email', placeholder: t('your_email') %>
             <i class="user icon"></i>
           </div>
         </div>
-        <%= f.submit "Send me reset password instructions", class: 'ui blue submit mini button', id: 'submit' %>
+        <%= f.submit t('send_me_reset_password_instructions'), class: 'ui blue submit mini button', id: 'submit' %>
         <div class="field">
           <%= render "devise/shared/links" %>
           <%= render 'devise/shared/errors', errors: resource.errors %>

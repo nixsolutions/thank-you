@@ -38,10 +38,15 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
-  document.getElementById('sign-up').addEventListener('click', () => {
-    const serverErrors = document.getElementById('servers-errors');
-    if (serverErrors) {
-      serverErrors.classList.add('hidden');
-    }
-  });
+
+  const signupForm = document.getElementById('sign-up');
+
+  if (signupForm) {
+    signupForm.addEventListener('click', () => {
+      const serverErrors = document.getElementById('servers-errors');
+      if (serverErrors) {
+        serverErrors.classList.add('hidden');
+      }
+    });
+  }
 });

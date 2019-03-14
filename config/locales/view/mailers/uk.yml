@@ -1,0 +1,8 @@
+---
+uk:
+  mailers:
+    devise:
+      headers:
+        hello: Вітаємо
+      links:
+        confirm_account: Підтвердити мій обліковий запис

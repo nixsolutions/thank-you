@@ -1,0 +1,63 @@
+---
+uk:
+  account_confirmation_header: 'Ви можете підтвердити вашу електронну пошту за посиланням нижче:'
+  account_has_been_locked: Ваш обліковий запис було заблоковано через надто високу кількість неправильних спроб увійти.
+  activerecord:
+    attributes:
+      organization:
+        description: Опис
+        name: Назва
+      user:
+        email: Електронна пошта
+        password: Пароль
+        password_confirmation: Підтвердження паролю
+    errors:
+      models:
+        contact:
+          attributes:
+            data:
+              informat: неправильний формат
+  are_you_sure: Ви впевнені?
+  back: Повернутися
+  cancel_my_account: Видалити мій обліковий запис
+  change_my_password: Змінити мій пароль
+  change_your_password: Змінити ваш пароль
+  characters_minimum: "%{count} символів мінімум"
+  click_the_link_to_unlock: 'Натисніть посилання для розблокування вашого облікового запису:'
+  confirm_new_password: Підтвердьте новий пароль
+  create: Create
+  currently_waiting_confirmation_for: 'Очікуємо на пітдвердження електронної пошти: %{email}'
+  destroy: Destroy
+  edit: Редагувати
+  email: Електронна пошта
+  email_changed_notice: Вашу електронну пошту буде змінено на
+  enter: Вхід
+  forgotten_password: Забули пароль?
+  ignore_email: Якщо ви не робили такий запит, проігноруйте цей лист.
+  leave_blank: "(залиште порожнім, якщо ви не хочете змінювати це)"
+  lost_confirmation_instructions: Не отримали інструкцій з підтвердження?
+  lost_unlock_instructions: Не отримали інтструкцій з розблокування?
+  need_current_password: "(нам потрібен ваш діючий пароль для підтвердження змін)"
+  new_organization: New organization
+  new_password: Новий пароль
+  organizations:
+    form:
+      title: Organization
+    prohibited: 'prohibited this organization from being saved:'
+  password: Пароль
+  password_changed_notice: Повідомляємо, що ваш пароль було змінено.
+  password_confirmation: підтвердження паролю
+  password_will_be_changed_after_creating_new_one: Ваш пароль не буде змінено, поки ви не створите новий.
+  recend_confirmation_instructions: Надіслати інструкції з підтвердження наново
+  remember_me: Запам'ятати мене
+  resend_unlock_instructions: Надіслати інструкції з розблокування наново
+  send_me_reset_password_instructions: змінити пароль
+  sign_in: Увійти
+  sign_out: Вийти
+  sign_up: Зареєструватися
+  someone_requested_password_change: Хтось зробив запит на зміну вашого паролю. Ви можете зробити це за посиланням нижче.
+  unhappy: Не задоволені?
+  unlock_my_account: розблокувати мій обліковий запис
+  update: Оновити
+  welcome: Вітаємо
+  your_email: ваша електронна пошта

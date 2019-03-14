@@ -10,7 +10,7 @@ describe 'User Signs Up' do
       invitation = create(:invitation)
       link = new_user_registration_url(token: invitation.token)
       sign_up(user, link)
-      expect(page).to have_current_path root_path
+      expect(page).to have_current_path root_path, ignore_query: true
     end
   end
 
