@@ -9,7 +9,7 @@
 <% @contacts.each do |contact| %>
   <%= contact.contact_type.main_type %> - <%= contact.contact_type.subtype %><br/>
   <%= contact.data %><br/>
-  <%= link_to t('crud.actions.update'), edit_contact_path(@organization) %>
+  <%= link_to t('crud.actions.update'), edit_contact_path(contact) %>
   <%= button_to t('crud.actions.destroy'), contact_path(contact), method: :delete, class: "delete_contact_#{contact.id}" %>
 <% end %>
 <%= link_to t('crud.actions.new'), new_contact_path %>
