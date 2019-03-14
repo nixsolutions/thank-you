@@ -16,4 +16,15 @@ install:
 script:
   - bundle exec rubocop .
   - bundle exec rspec
+deploy:
+  provider: heroku
+  app: thank-you-test
+  run:
+    - 'rake db:migrate'
+    - 'rake cleanup'
+  on:
+    branch:
+      - master
+  api_key:
+    secure: GFKmRAxZRsv3z0tcuZxvYvp5Wx+6Eqm6KIn5JJOojDlyHOIZMMAr35x+Lwl9WgqfbU8fJByHy99vaj2+/Q+gOcYs1/Ejc8CoOq3/GzoAvSWNhcjnrZBpJup9yFi2SecraslammveufoQe1jdMX9Ez6Tf/4Yle4vWuMrDFIWkaJdnuhCqzfKBXK0Sf/vMuJbpT6D9TyIomcQTtyOra0tSC+91IV8sOP19jgWmwOO3fPtODcYGDGWoTniPZEqARaVomlbABE1jC9rs7RyVB0EZHv3z8USYp11WonTEeF5+vZlIHa16zSjX0Q0oiTngSk33pKgj48v5Keu32Maxje4rzSMvRJ2Uf44THzl6mjXxQB5zBPDSbqiFIjNK+CKxG7OKMsEg4mJ1eDLcQU6TWMBEF4w9sqIajne2/iIU+9Td0JILQKy0rQdax9yMA4wNdNV6C1yOEciLKItPvt20zg21YUKGgYBfAFFYw/5O60zLYT7QxNWPqcldgmiw5fwanfF0Krwy3bThJz7gbyWY5+jw+VbDdr9LprNen33/4mLLiDtOAhCa8WXFw0wZO8uVe/O0KYOqkD7nT7mTcCtuokbprfa9djUsaDqFy5el0rxCP7oALn1u5WJENh+y6Yk84sT6DVh2WONeLzzA6VmQXpH36k29LrdGB/gV2fMNQ0B0zLw=
 
