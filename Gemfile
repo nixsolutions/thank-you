@@ -40,6 +40,7 @@ gem 'sentry-raven'
 
 group :development, :test do
   gem 'bullet'
+  gem 'bundle-audit'
   gem 'byebug'
   gem 'dotenv-rails'
   gem 'factory_bot_rails'
