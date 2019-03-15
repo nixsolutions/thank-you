@@ -6,7 +6,7 @@ uk:
     attributes:
       contact:
         contact_type: Тип контакту
-        data: дані
+        data: Дані
         organization: Організація
       organization:
         description: Опис
