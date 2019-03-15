@@ -12,6 +12,7 @@ uk:
         description: Опис
         name: Назва
       user:
+        current_password: Діючий пароль
         email: Електронна пошта
         password: Пароль
         password_confirmation: Підтвердження паролю

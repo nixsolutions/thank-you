@@ -3,18 +3,6 @@ en:
   account_confirmation_header: 'You can confirm your account email through the link below:'
   account_has_been_locked: Your account has been locked due to an excessive number of unsuccessful sign in attempts.
   activerecord:
-    attributes:
-      contact:
-        contact_type: Contact Type
-        data: data
-        organization: Organization
-      organization:
-        description: Description
-        name: Name
-      user:
-        email: Email
-        password: Password
-        password_confirmation: Password confirmation
     errors:
       models:
         contact:
