@@ -29,7 +29,6 @@ uk:
   characters_minimum: "%{count} символів мінімум"
   click_the_link_to_unlock: 'Натисніть посилання для розблокування вашого облікового запису:'
   confirm_new_password: Підтвердьте новий пароль
-  create: Створити
   contacts:
     form:
       title: Контакт
@@ -55,7 +54,6 @@ uk:
   lost_confirmation_instructions: Не отримали інструкцій з підтвердження?
   lost_unlock_instructions: Не отримали інтструкцій з розблокування?
   need_current_password: "(нам потрібен ваш діючий пароль для підтвердження змін)"
-  new_organization: Нова організація
   new_password: Новий пароль
   organizations:
     form:
