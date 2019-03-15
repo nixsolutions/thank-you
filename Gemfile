@@ -36,6 +36,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'haml-rails'
 gem 'sentry-raven'
 
 group :development, :test do
@@ -45,6 +46,7 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'factory_bot_rails'
   gem 'faker'
+  gem 'haml_lint', require: false
   gem 'i18n-tasks'
   gem 'pry-rails'
   gem 'rspec-rails', '~> 3.8'

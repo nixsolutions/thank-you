@@ -1,0 +1,7 @@
+- if resource.errors.any?
+  #error_explanation
+    %h2
+      = t('organizations.prohibited', count: resource.errors.count)
+    %ul
+      - resource.errors.full_messages.each do |message|
+        %li= message

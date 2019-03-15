@@ -1,0 +1,7 @@
+.errors
+  - if errors.any?
+    .ui.red.tiny.message#servers-errors
+      %ul.list
+        - errors.full_messages.each do |error|
+          %li= error
+  .ui.error.red.tiny.message

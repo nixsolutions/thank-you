@@ -1,0 +1,8 @@
+%p
+  = t('welcome')
+  = @email
+  \!
+%p
+  = t('account_confirmation_header')
+  \&gt;
+%p= link_to t('mailers.devise.links.confirm_account'), confirmation_url(@resource, confirmation_token: @token)

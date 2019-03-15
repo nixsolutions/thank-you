@@ -1,0 +1,27 @@
+= @organization.user.email
+%br/
+= @organization.name
+%br/
+= @organization.description
+%br/
+%div{ style: 'display: flex' }
+  = link_to t('crud.actions.back'), organizations_path, class: 'ui white submit button'
+  = link_to t('crud.actions.update'), edit_organization_path(@organization), class: 'ui orange submit button'
+  = button_to t('crud.actions.destroy'),
+              organization_path(@organization),
+              method: :delete, class: 'ui red submit button', style: 'display: inline, margin: 0'
+%p= t('contacts.show.title')
+.ui.list
+  - @contacts.each do |contact|
+    .item
+      = contact.contact_type.main_type
+      \- #{contact.contact_type.subtype}
+      %br/
+      = contact.data
+      %br/
+      %div{ style: 'display: flex; justify-content: left' }
+        = link_to t('crud.actions.update'), edit_contact_path(contact), class: 'ui orange submit button'
+        = button_to t('crud.actions.destroy'),
+                    contact_path(contact),
+                    method: :delete, class: "delete_contact_#{contact.id} ui red submit button"
+= link_to t('crud.actions.new'), new_contact_path, class: 'ui blue submit button'

@@ -1,0 +1,16 @@
+%h1
+  = I18n.t('organizations.form.title')
+  \:
+= form_for organization do |f|
+  = render 'common/errors', resource: organization
+  .container
+    = f.label :name
+    %br/
+    = f.text_field :name
+  .container
+    = f.label :description
+    %br/
+    = f.text_field :description
+    %br/
+  = f.submit t('crud.actions.create')
+= link_to I18n.t('crud.actions.back'), organizations_path

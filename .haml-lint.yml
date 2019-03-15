@@ -1,0 +1,23 @@
+exclude:
+  - "app/views/devise/mailer/*"
+  - "vendor/**/*"
+
+linters:
+
+  IdNames:
+    exclude:
+      - 'app/views/common/_errors.html.haml'
+
+  LineLength:
+    enabled: true
+    max: 120
+
+  InlineStyles: # TODO: remove inline styles in https://github.com/nixsolutions/thank-you/issues/57
+    enabled: false
+
+  RuboCop:
+    enabled: true
+    inherit_from: .rubocop.yml
+
+  RubyComments:
+    enabled: true

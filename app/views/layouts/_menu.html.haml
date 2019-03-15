@@ -1,0 +1,9 @@
+.ui.secondary.menu
+  %h4.ui.header.item
+    = link_to 'Thank You', root_path, class: 'main-link'
+  .right.menu
+    - if current_user.present?
+      %h5.item= current_user.email
+      = button_to t('sign_out'), destroy_user_session_path, method: :delete, class: 'ui inverted blue button'
+    - else
+      = button_to t('sign_in'), new_user_session_path, method: :get, class: 'ui inverted blue button'

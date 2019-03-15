@@ -1,0 +1,24 @@
+.ui.placeholder.segment
+  %h2.ui.header.center.aligned= t('enter')
+  .ui.one.column.very.relaxed.stackable.grid
+    .column
+      = form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: 'sign-in' }) do |f|
+        .field
+          = f.label :email
+          .ui.left.icon.input
+            = f.email_field :email, autofocus: true, autocomplete: 'email', placeholder: t('email')
+            %i.user.icon
+        .field
+          = f.label :password
+          %br/
+          .ui.left.icon.input
+            = f.password_field :password, autocomplete: 'current-password', placeholder: t('password')
+            %i.lock.icon
+        - if devise_mapping.rememberable?
+          .field
+            .ui.checkbox.sign-in-checkbox
+              = f.check_box :remember_me
+              = f.label :remember_me, t('remember_me')
+        = f.submit t('sign_in'), class: 'ui blue submit button'
+        .field
+          = render 'devise/shared/links'

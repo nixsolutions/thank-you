@@ -1,0 +1,26 @@
+%h1
+  = I18n.t('contacts.form.title')
+  \:
+.ui.placeholder.segment
+  %h2.ui.header.center.aligned= t('contacts.form.title')
+  .ui.one.column.very.relaxed.stackable.grid
+    .column
+      = form_for contact, html: { class: 'ui form' } do |f|
+        = render 'common/errors', resource: contact
+        .field
+          = f.label :data
+          .ui.left.icon.input.email
+            = f.text_field :data
+        .field
+          = f.label :organization
+          = select 'contact',
+                   'organization_id',
+                   Organization.all.collect { |p| [p.name, p.id] },
+                   include_blank: true
+        .field
+          = f.label :contact_type
+          .ui.left.icon.input
+            = f.collection_select :contact_type_id, ContactType.all, :id, :main_type
+        %div{ style: 'display: flex; justify-content: center' }
+          = f.submit t('crud.actions.contact.new'), class: 'ui blue submit button', style: 'margin: 0'
+          = button_to t('crud.actions.back'), organizations_path, class: 'ui blue submit button', style: 'margin: 0'
