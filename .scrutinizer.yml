@@ -10,7 +10,7 @@ build:
         override:
           - ruby-scrutinizer-run
           -
-            command: rubocop-run
+            command: rubocop-run --config .rubocop.yml
             use_website_config: false
           - js-scrutinizer-run
       environment:
