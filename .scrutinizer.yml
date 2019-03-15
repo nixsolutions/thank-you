@@ -18,12 +18,19 @@ build:
           version: 2.6.0
         node: v10.14.2
     tests:
+      tests:
+        override:
+          - command: 'bundle exec rspec --format=progress spec'
+            coverage:
+              file: scrutinizer-coverage
+              format: rb-cc
       project_setup:
         before:
           - 'cp config/database.yml.example config/database.yml'
           - 'bundle exec rails db:create db:migrate'
       environment:
         variables:
+          SCRUTINIZER_CC_FILE: 'scrutinizer-coverage'
           THANKYOU_DATABASE_USERNAME: 'scrutinizer'
           THANKYOU_DATABASE_PASSWORD: 'scrutinizer'
         ruby:

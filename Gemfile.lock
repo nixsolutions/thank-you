@@ -76,6 +76,7 @@ GEM
       responders
       warden (~> 1.2.3)
     diff-lcs (1.3)
+    docile (1.3.1)
     dotenv (2.6.0)
     dotenv-rails (2.6.0)
       dotenv (= 2.6.0)
@@ -112,6 +113,7 @@ GEM
     jbuilder (2.8.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
+    json (2.2.0)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -233,10 +235,17 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
+    scrutinizer-ocular (1.0.1)
+      simplecov (>= 0.7)
     sentry-raven (2.9.0)
       faraday (>= 0.7.6, < 1.0)
     shoulda-matchers (4.0.0.rc1)
       activesupport (>= 4.2.0)
+    simplecov (0.16.1)
+      docile (~> 1.1)
+      json (>= 1.8, < 3)
+      simplecov-html (~> 0.10.0)
+    simplecov-html (0.10.2)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -306,6 +315,7 @@ DEPENDENCIES
   rubocop (~> 0.63.1)
   rubocop-rspec
   sass-rails (~> 5.0)
+  scrutinizer-ocular
   sentry-raven
   shoulda-matchers (= 4.0.0.rc1)
   spring

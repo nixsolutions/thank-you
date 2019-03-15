@@ -43,6 +43,8 @@ Bullet.raise = true
 Bullet.bullet_logger = true
 Bullet.rails_logger = true
 
+Scrutinizer::Ocular.watch!
+
 RSpec.configure do |config|
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false

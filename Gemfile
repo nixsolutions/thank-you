@@ -65,6 +65,7 @@ group :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'rails-controller-testing'
+  gem 'scrutinizer-ocular'
   gem 'shoulda-matchers', '4.0.0.rc1'
 end
 
