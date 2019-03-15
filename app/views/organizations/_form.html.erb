@@ -1,6 +1,6 @@
 <h1><%= I18n.t('organizations.form.title') %>:</h1>
 <%= form_for organization do |f| %>
-  <%= render 'errors', resource: organization %>
+  <%= render 'common/errors', resource: organization %>
 
   <div class="container">
     <%= f.label :name %><br/>
@@ -12,7 +12,7 @@
     <%= f.text_field :description %><br/>
   </div>
 
-  <%= f.submit t('create') %>
+  <%= f.submit t('crud.actions.create') %>
 <% end %>
 
-<%= link_to t('back'), organizations_path %>
+<%= link_to I18n.t('crud.actions.back'), organizations_path %>

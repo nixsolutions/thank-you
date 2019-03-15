@@ -4,6 +4,10 @@ uk:
   account_has_been_locked: Ваш обліковий запис було заблоковано через надто високу кількість неправильних спроб увійти.
   activerecord:
     attributes:
+      contact:
+        contact_type: Тип контакту
+        data: Дані
+        organization: Організація
       organization:
         description: Опис
         name: Назва
@@ -25,9 +29,21 @@ uk:
   characters_minimum: "%{count} символів мінімум"
   click_the_link_to_unlock: 'Натисніть посилання для розблокування вашого облікового запису:'
   confirm_new_password: Підтвердьте новий пароль
-  create: Створити
+  contacts:
+    form:
+      title: Контакт
+    show:
+      title: Контакти
+  crud:
+    actions:
+      back: Назад
+      contact:
+        new: Новий
+      create: Створити
+      destroy: Видалити
+      new: Нова
+      update: Оновити
   currently_waiting_confirmation_for: 'Очікуємо на пітдвердження електронної пошти: %{email}'
-  destroy: Destroy
   edit: Редагувати
   email: Електронна пошта
   email_changed_notice: Вашу електронну пошту буде змінено на
@@ -38,7 +54,6 @@ uk:
   lost_confirmation_instructions: Не отримали інструкцій з підтвердження?
   lost_unlock_instructions: Не отримали інтструкцій з розблокування?
   need_current_password: "(нам потрібен ваш діючий пароль для підтвердження змін)"
-  new_organization: Нова організація
   new_password: Новий пароль
   organizations:
     form:
