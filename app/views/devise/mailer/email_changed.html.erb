@@ -1,7 +1,0 @@
-<p><%= "#{t('mailers.devise.headers.hello')} #{@email}"%>!</p>
-
-<% if @resource.try(:unconfirmed_email?) %>
-  <p><%= t('email_changed_notice') %> <%= @resource.unconfirmed_email %>.</p>
-<% else %>
-  <p><%= t('email_changed_notice') %> <%= @resource.email %>.</p>
-<% end %>

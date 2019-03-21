@@ -1,0 +1,13 @@
+%p
+  = "#{t('mailers.devise.headers.hello')} #{@email}"
+  \!
+- if @resource.try(:unconfirmed_email?)
+  %p
+    = t('email_changed_notice')
+    = @resource.unconfirmed_email
+    \.
+- else
+  %p
+    = t('email_changed_notice')
+    = @resource.email
+    \.

@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const closeButton = document.getElementById('close');
-  if (closeButton) {
-    closeButton.addEventListener('click', function(e) {
+  const closeButtons = document.getElementsByClassName('close');
+
+  Array.from(closeButtons).forEach((element) => {
+    element.addEventListener('click', (e) => {
       e.target.parentElement.classList.add("hidden");
     });
-  }
+  });
 });

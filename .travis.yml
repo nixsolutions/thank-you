@@ -16,6 +16,7 @@ install:
 script:
   - bundle audit check --update
   - bundle exec rubocop .
+  - bundle exec haml-lint
   - bundle exec rspec
 deploy:
   provider: heroku

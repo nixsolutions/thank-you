@@ -47,7 +47,7 @@ describe 'User see contacts' do
       it 'does not create contact' do
         click_on 'New'
 
-        expect(page).to have_content "data can't be blank"
+        expect(page).to have_content "Data can't be blank"
       end
     end
   end
@@ -86,7 +86,7 @@ describe 'User see contacts' do
       end
 
       it 'includes errors' do
-        expect(page).to have_content "data can't be blank"
+        expect(page).to have_content "Data can't be blank"
       end
     end
   end

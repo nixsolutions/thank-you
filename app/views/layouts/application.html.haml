@@ -1,0 +1,16 @@
+!!!
+%html
+  %head
+    %meta{ content: 'text/html; charset=UTF-8', 'http-equiv' => 'Content-Type' }/
+    %title Thankyou
+    = csrf_meta_tags
+    = csp_meta_tag
+    = javascript_pack_tag 'thankYou/index'
+    = stylesheet_pack_tag 'thankYou/assets/stylesheets/app'
+  %body.ui.container.relaxed
+    %header
+      = render 'layouts/menu'
+    = render 'layouts/notices_alerts'
+    #root
+    .ui.container
+      = yield

@@ -1,0 +1,9 @@
+- @organizations.each do |organization|
+  %ul
+    %li
+      = organization.user.email
+      %br/
+      = link_to organization.name, organization
+      %br/
+      = organization.description
+= link_to t('crud.actions.new'), new_organization_path

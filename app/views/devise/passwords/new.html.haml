@@ -1,0 +1,17 @@
+.ui.placeholder.segment
+  %h2.ui.header.center.aligned= t('forgotten_password')
+  .ui.one.column.very.relaxed.stackable.grid
+    .column
+      = form_for resource, as: resource_name,
+                           url: password_path(resource_name),
+                           html: { method: :post },
+                           class: 'ui form' do |f|
+        .field
+          = f.label :email
+          .ui.left.icon.input
+            = f.email_field :email, autofocus: true, autocomplete: 'email', placeholder: t('your_email')
+            %i.user.icon
+        = f.submit t('send_me_reset_password_instructions'), class: 'ui blue submit mini button', id: 'submit'
+        .field
+          = render 'devise/shared/links'
+          = render 'devise/shared/errors', errors: resource.errors
