@@ -13,6 +13,8 @@ build:
             command: rubocop-run --config .rubocop.yml
             use_website_config: false
           - js-scrutinizer-run
+          - csslint-run
+          - bundle-audit-run --update
       environment:
         ruby:
           version: 2.6.0
